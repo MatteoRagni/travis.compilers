@@ -2,7 +2,7 @@ language: bash
 matrix:
   include:
     - os: windows
-      install: choco install visualstudio2017-workload-vctools
+      install: choco install -y vcbuildtools
       script: cl.exe test.cpp -Fotest.exe
 
       
