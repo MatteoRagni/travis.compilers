@@ -6,7 +6,7 @@ HEADERS = $(wildcard *.h)
 
 default: $(TARGET)
 
-ci: version all
+travis: version all
 
 all: default
 

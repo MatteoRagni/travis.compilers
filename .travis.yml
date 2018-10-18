@@ -1,13 +1,13 @@
-language: generic
+language: bash
 matrix:
   include:
     - os: linux
-      script: make
+      script: make travis
     - os: osx
-      script: make
+      script: make travis
     - os: windows
       install: choco install mingw
-      script: make
+      script: mingw32-make travis
 
       
       
