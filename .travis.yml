@@ -12,6 +12,7 @@ matrix:
       install: choco install mingw --version 4.9.3 --force
       script: mingw32-make travis
     - os: windows
+      install: choco install visualstudio2017-workload-vctools
       script: powershell -Command "nmake travis /FMakefile.win"
 
       
