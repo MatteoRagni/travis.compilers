@@ -1,0 +1,27 @@
+TARGET = test.exe
+OBJECTS = test.o
+
+.PHONY: default all clean version ci
+
+default: $(TARGET)
+
+travis: version all
+
+all: default
+
+version:
+	@echo "--- VERSION  ---"
+	@echo "Visual Studio Compiler"
+	@echo "--- VERSION END ---"
+
+%.o: %.cpp
+	$(CXX) /c $< /Fo$@
+
+.PRECIOUS: $(TARGET) $(OBJECTS)
+
+$(TARGET): $(OBJECTS)
+	$(LINK) $(OBJECTS) /OUT:$@
+
+clean:
+	-del *.o
+	-del $(TARGET)

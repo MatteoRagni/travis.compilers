@@ -12,7 +12,7 @@ matrix:
       install: choco install mingw --version 4.9.3 --force
       script: mingw32-make travis
     - os: windows
-      script: nmake travis
+      powershell: nmake travis
 
       
       
