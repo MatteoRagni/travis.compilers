@@ -1,0 +1,14 @@
+language: generic
+matrix:
+  include:
+    - os: linux
+      script: make
+    - os: osx
+      script: make
+    - os: windows
+      install: choco install mingw
+      script: make
+
+      
+      
+      
