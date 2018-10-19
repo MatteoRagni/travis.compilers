@@ -11,7 +11,7 @@ matrix:
       script: 
         - export PATH=$VSBUILDTOOLS_PATH:$MSBUILD_PATH:$CMAKE_PATH:$PATH
         - mkdir build && cd build && cmake ..
-        - MSBuild test.sln
+        - MSBuild.exe test.sln
 
 
 
