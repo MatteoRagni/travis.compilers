@@ -9,8 +9,8 @@ matrix:
       install:
         - choco install -y vcbuildtools
       script: 
-        - ls "/c/Program Files (x86)/MSBuild"
-        - ls "/c/Program Files (x86)/MSBuild/15.0"
+        - ls -alR "/c/Program Files (x86)/MSBuild"
+        
 
 
       
