@@ -10,7 +10,7 @@ matrix:
         - echo $PATH
         - mkdir build && cd build
         - cmake .. 
-        - MSBuild test.sln
+        - MSBuild.exe test.sln
 
 
 
