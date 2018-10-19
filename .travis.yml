@@ -6,11 +6,15 @@ matrix:
         - VSBUILDTOOLS_PATH="/c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin"
         - MSBUILD_PATH="/c/Program Files (x86)/MSBuild/15.0/Bin"
         - CMAKE_PATH="/c/Program Files/CMake/bin"
-      install:
-        - choco install -y vcbuildtools
+      install: 
+        - choco install -y vcbuildtools --force
       script: 
-        - ls -alR "/c/Program Files (x86)/MSBuild"
-        
+        - export PATH=$VSBUILDTOOLS_PATH:$MSBUILD_PATH:$CMAKE_PATH:$PATH
+        - echo $PATH
+        - mkdir build && cd build
+        - cmake .. 
+        - MSBuild test.sln
+
 
 
       
