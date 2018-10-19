@@ -6,8 +6,8 @@ matrix:
         - CMAKE_PATH="/c/Program Files/CMake/bin"
       script: 
         - export PATH=$CMAKE_PATH:$PATH
-        - ls -alR "/c/Program Files"
         - ls -alR "/c/Program Files (x86)"
+        - ls -alR "/c/Program Files/Microsoft SDKs"
 
 
 
