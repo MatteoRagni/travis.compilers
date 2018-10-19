@@ -3,13 +3,18 @@ matrix:
   include:
     - os: windows
       env:
-        - VSBUILDTOOLS_PATH="/c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin"
         - MSBUILD_PATH="/c/Program Files (x86)/MSBuild/14.0/Bin"
         - CMAKE_PATH="/c/Program Files/CMake/bin"
       script: 
         - ls -al /c
         - ls -al "/c/Program Files"
         - ls -al "/c/Program Files (x86)"
+        - ls -al "/c/Program Files/Microsoft Visual Studio/2017/BuildTools/VC/Tools/MSVC/14.15.26726/bin/Hostx86/x86/"
+        - ls -al "/c/Program Files/Microsoft Visual Studio/2017/"
+        - ls -al "/c/Program Files/Microsoft Visual Studio/2017/BuildTools/"
+        - mkdir build && cd build
+        - /c/Program Files/CMake/bin/cmake ..
+
 
       
       
