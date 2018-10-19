@@ -1,6 +1,19 @@
 language: bash
 matrix:
   include:
+    - os: linux
+      script: make travis
+    - os: linux
+      compiler: clang
+      script: make travis
+    - os: osx
+      script: make travis
+    - os: windows
+      install: choco install mingw
+      script: mingw32-make travis
+    - os: windows
+      install: choco install mingw --version 4.9.3 --force
+      script: mingw32-make travis
     - os: windows
       env:
         - MSBUILD_PATH="/c/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin"
