@@ -18,8 +18,7 @@ matrix:
       env:
         - CMAKE_PATH="/c/Program Files/CMake/bin"
       script: 
-        - export PATH=$MSBUILD_PATH:$CMAKE_PATH:$PATH
-        - env
+        - export PATH=$CMAKE_PATH:$PATH
         - mkdir build && cd build
         - cmake .. 
         - cmake --build . 
