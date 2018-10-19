@@ -7,11 +7,13 @@ matrix:
         - MSBUILD_PATH="/c/Program Files (x86)/MSBuild/14.0/Bin"
         - CMAKE_PATH="/c/Program Files/CMake/bin"
       install: 
-        - choco install -y vcbuildtools
-        - choco install -y cmake
+        - choco install -y vcbuildtools --force
       script: 
-        - export PATH=$VSBUILDTOOLS_PATH:$MSBUILD_PATH:$CMAKE_BIN:$PATH
-        - mkdir build && cd build && cmake .. && msbuild test.sln
+        - export PATH=$VSBUILDTOOLS_PATH:$MSBUILD_PATH:$CMAKE_PATH:$PATH
+        - echo $PATH
+        - mkdir build && cd build
+        - cmake .. 
+        - msbuild test.sln
 
       
       
