@@ -6,7 +6,11 @@ matrix:
         - CMAKE_PATH="/c/Program Files/CMake/bin"
       script: 
         - export PATH=$CMAKE_PATH:$PATH
-        - ls -alR "/c/Program Files (x86)"
+        - ls -alR "/c/Program Files (x86)/MSBuild"
+        - ls -alR "/c/Program Files (x86)/Microsoft Visual Studio"
+        - ls -alR "/c/Program Files (x86)/Microsoft Visual Studio 14.0"
+        - ls -alR "/c/Program Files (x86)/Microsoft SDKs"
+        - ls -alR "/c/Program Files (x86)/Microsoft"
         - ls -alR "/c/Program Files/Microsoft SDKs"
 
 
