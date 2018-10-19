@@ -16,14 +16,13 @@ matrix:
       script: mingw32-make travis
     - os: windows
       env:
-        - MSBUILD_PATH="/c/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin"
         - CMAKE_PATH="/c/Program Files/CMake/bin"
       script: 
         - export PATH=$MSBUILD_PATH:$CMAKE_PATH:$PATH
-        - echo $PATH
+        - env
         - mkdir build && cd build
         - cmake .. 
-        - MSBuild.exe test.sln
+        - cmake --build . 
 
 
 
