@@ -2,10 +2,12 @@ language: bash
 matrix:
   include:
     - os: windows
+      env:
+        - VSBUILDTOOLS_PATH="/c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin"
       install: choco install -y vcbuildtools
       script: 
-        - echo $PATH
-        - cl.exe test.cpp -Fotest.exe
+        - export PATH=$VSBUILDTOOLS_PATH:$PATH
+        - nmake travis /FMakefile.win
 
       
       
