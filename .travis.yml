@@ -54,10 +54,7 @@ matrix:
       install: choco install mingw --version 4.9.3 --force
       script: mingw32-make travis
     - os: windows
-      env:
-        - CMAKE_PATH="/c/Program Files/CMake/bin"
       script: 
-        - export PATH=$CMAKE_PATH:$PATH
         - mkdir build && cd build
         - cmake .. 
         - cmake --build . 
